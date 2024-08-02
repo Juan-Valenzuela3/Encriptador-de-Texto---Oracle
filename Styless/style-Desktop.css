@@ -1,0 +1,77 @@
+/* Configuraciones generales */
+
+:root {
+    --primary-colorL: #F1FFBD;
+    --secondary-colorL: #B4C186;
+    --third-colorL: #000000;
+
+    --primary-colorD: #0B1E26;
+    --secondary-colorD: #CBF0FF;
+    --third-colorD: #FCFCFC;
+}
+
+body {
+    background-color: var(--primary-colorL);
+    height: 100vh;
+    margin: 0;
+}
+
+/* Zona principal */
+header {
+    height: 100px;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+}
+
+footer {
+    background-color: var(--secondary-colorL);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+/* Div de texto */
+
+#text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/* Div de encriptación */
+
+#encriptacion {
+    height: 714px;
+    width: 406px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-colorL);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+}
+
+#copy {
+    height: 42px;
+    width: 105px;
+}
+
+#text-Desencriptado {
+    height: 124px;
+    width: 328px;
+}
