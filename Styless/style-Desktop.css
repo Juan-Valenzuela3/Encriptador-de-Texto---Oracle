@@ -1,8 +1,9 @@
 /* Configuraciones generales */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+1+Code:wght@100..700&display=swap');
 
 :root {
-    --primary-colorL: #F1FFBD;
-    --secondary-colorL: #B4C186;
+    --primary-colorL: #F1FFBDB0;
+    --secondary-colorL: #B4C186EF;
     --third-colorL: #000000;
 
     --primary-colorD: #0B1E26;
@@ -12,8 +13,10 @@
 
 body {
     background-color: var(--primary-colorL);
+    font-family: "Chakra Petch", sans-serif;;
     height: 100vh;
     margin: 0;
+    
 }
 
 /* Zona principal */
@@ -49,8 +52,41 @@ footer {
 
 h1 {
     margin: 0;
+    font-size: 40px;
 }
 
+#ingresar-texto {
+    font-size: 32px;
+    font-weight:200;
+    border: none;
+    background-color: #f1ffbd33;
+}
+
+#ingresar-texto:active{
+    
+}
+
+#ingresar-texto:focus {
+    outline: none;
+}
+
+i{
+    margin-right: 20px;
+}
+#advertencia {
+    font-size: 20px;
+    font-weight:normal;
+}
+
+#encriptar, #desencriptar {
+    background-color: var(--secondary-colorL);
+    border: none;
+    border-radius: 15px;
+    height: 67px;
+    width: 239px;
+    font-size: 24px;
+    font-weight: 400;
+}
 
 /* Div de encriptación */
 
