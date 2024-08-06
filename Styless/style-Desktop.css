@@ -14,6 +14,8 @@
 body {
     background-color: var(--primary-colorL);
     font-family: "Chakra Petch", sans-serif;;
+    display: flex;
+    justify-content: center;
     height: 100vh;
     margin: 0;
     
@@ -26,8 +28,10 @@ header {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
 }
 
 footer {
@@ -47,7 +51,15 @@ footer {
 #text {
     display: flex;
     flex-direction: column;
-    margin: 0 100px;
+    flex-flow: wrap;
+    align-content: space-between;
+    margin: 0;
+    max-height: 715px;
+    min-height: 714px;
+    width: 500px;
+    border: none;
+    padding: 0;
+    
 }
 
 h1 {
@@ -56,17 +68,19 @@ h1 {
 }
 
 #ingresar-texto {
+    width: 460px; /* Ancho fijo */
+    height: 460px;
+    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es demasiado largo */
+    word-wrap: break-word;
     font-size: 32px;
-    font-weight:200;
-    border: none;
-    background-color: #f1ffbd33;
-}
-
-#ingresar-texto:active{
-    
+    font-weight:lighter;
+    border: none;   
+    background-color: #f1ffbd00;   
 }
 
 #ingresar-texto:focus {
+    border: none;
     outline: none;
 }
 
@@ -82,24 +96,33 @@ i{
     background-color: var(--secondary-colorL);
     border: none;
     border-radius: 15px;
-    height: 67px;
-    width: 239px;
+    height: 61px;
+    width: 200px;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 300;
+}
+
+
+.button {
+    display: flex;
+    gap: 65px;
+    width: 490px;
 }
 
 /* Div de encriptación */
 
 #encriptacion {
-    height: 714px;
-    width: 406px;
+    height: 680px;
+    width: 386px;
     display: flex;
     flex-direction: column;
+    flex-flow: wrap;
+    align-content: space-between;
     background-color: var(--secondary-colorL);
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    margin: 0 40px;
+    padding: 20px
 }
 
 #copy {
