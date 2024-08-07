@@ -1,26 +1,53 @@
-/*
+document.getElementById('encriptar').addEventListener('click', encriptar);
+document.getElementById('desencriptar').addEventListener('click', desencriptar);
 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
 
-*/
+// Funciones
 
-function encriptar (texto) {
-    let regex = /^[a-z]+$/;
+function encriptar () {
+    let texto = document.getElementById('ingresar-texto').value;
+    let textResult = document.getElementById('text-Desencriptado');
+    limpiarTextArea();
+
+    let regex = /^[a-z\s]+$/;
 
     if (regex.test(texto)) {
-        console.log('Texto ingresado correctamente');
+
+        let newText = texto.replace(/e/g, 'enter')
+                            .replace(/i/g, 'imes')
+                            .replace(/a/g, 'ai')
+                            .replace(/o/g, 'ober')
+                            .replace(/u/g, 'ufat');
+
+        textResult.textContent = newText;
+            
     } else {
         console.log('No cumple con la validación');
         
     }
+}
     
-    
+function desencriptar() {
+    let texto = document.getElementById('ingresar-texto').value;
+    let textResult = document.getElementById('text-Desencriptado');
+    let regex = /^[a-z\s]+$/;
+
+    if (regex.test(texto)) {
+
+        let newText = texto.replace(/enter/g, 'e')
+                            .replace(/imes/g, 'i')
+                            .replace(/ai/g, 'a')
+                            .replace(/ober/g, 'o')
+                            .replace(/ufat/g, 'u');
+
+        textResult.textContent = newText;
+            
+    } else {
+        console.log('No cumple con la validación');
+        
+    }
 }
 
-encriptar('texto8')
-
-// solo acepta minúsculas, pero no he revisado los espacios y otros caracteres
+function limpiarTextArea () {
+    document.getElementById('ingresar-texto').value = '';
+}
