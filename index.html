@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styless/normalize.css">
     <link rel="stylesheet" href="./Styless/style-Desktop.css">
+    <link rel="stylesheet" href="./Styless/alert.css">
     <script src="https://kit.fontawesome.com/f861f16254.js" crossorigin="anonymous"></script>
     <title>Encriptador de Texto</title>
 </head>
@@ -18,6 +19,7 @@
         <div id="text">
             <h1>ENCRIPTADOR DE TEXTO</h1>
             <textarea placeholder="Ingresa el texto aquí" id="ingresar-texto"></textarea>
+            <div id="alertEncriptar"></div>
             <p id="advertencia"><i class="fa-solid fa-circle-exclamation"></i>Solo letras minúsculas y sin acentos</p>
             <div class="button">
                 
@@ -27,10 +29,17 @@
             
         </div>
         <div id="encriptacion">
-            <p id="text-Desencriptado"></p>
+            <textarea id="text-Desencriptado" disabled></textarea>
             <button id="copy">Copiar</button>
         </div>
 
+        <!- Div de alerta ->
+
+        <div id="ovarlay" class="overlay hidden">
+            <div class="overlay-content">
+                <button id="close-overlay"></button>
+            </div>
+        </div>
     </main>
 
     <footer>

@@ -1,13 +1,13 @@
 document.getElementById('encriptar').addEventListener('click', encriptar);
 document.getElementById('desencriptar').addEventListener('click', desencriptar);
-
+document.getElementById('copy').addEventListener('click', copiarTexto);
 
 // Funciones
 
 function encriptar () {
     let texto = document.getElementById('ingresar-texto').value;
     let textResult = document.getElementById('text-Desencriptado');
-    limpiarTextArea();
+    limpiarTextAreaE();
 
     let regex = /^[a-z\s]+$/;
 
@@ -19,7 +19,7 @@ function encriptar () {
                             .replace(/o/g, 'ober')
                             .replace(/u/g, 'ufat');
 
-        textResult.textContent = newText;
+        textResult.value = newText;
             
     } else {
         console.log('No cumple con la validación');
@@ -30,6 +30,8 @@ function encriptar () {
 function desencriptar() {
     let texto = document.getElementById('ingresar-texto').value;
     let textResult = document.getElementById('text-Desencriptado');
+    limpiarTextAreaD();
+
     let regex = /^[a-z\s]+$/;
 
     if (regex.test(texto)) {
@@ -40,7 +42,7 @@ function desencriptar() {
                             .replace(/ober/g, 'o')
                             .replace(/ufat/g, 'u');
 
-        textResult.textContent = newText;
+        textResult.value = newText;
             
     } else {
         console.log('No cumple con la validación');
@@ -48,6 +50,23 @@ function desencriptar() {
     }
 }
 
-function limpiarTextArea () {
+
+function copiarTexto() {
+    const textDesencriptar = document.getElementById('text-Desencriptado').value;
+    
+    navigator.clipboard.writeText(textDesencriptar)
+        .then(() => {
+            alert("Texto copiado al portapapeles");
+        })
+        .catch(err => {
+            console.log('Error al copiar texto:', err);            
+        })
+}
+
+function limpiarTextAreaE () {
     document.getElementById('ingresar-texto').value = '';
+}
+
+function limpiarTextAreaD () {
+    document.getElementById('text-Desencriptado').value = '';
 }
