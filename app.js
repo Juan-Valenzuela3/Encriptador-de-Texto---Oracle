@@ -1,6 +1,8 @@
 document.getElementById('encriptar').addEventListener('click', encriptar);
 document.getElementById('desencriptar').addEventListener('click', desencriptar);
 document.getElementById('copy').addEventListener('click', copiarTexto);
+document.getElementById('close-overlay').addEventListener('click', cerrarAlerta);
+document.getElementById('icon-Theme').addEventListener('click', chageTheme);
 
 // Funciones
 
@@ -22,8 +24,11 @@ function encriptar () {
         textResult.value = newText;
             
     } else {
-        console.log('No cumple con la validación');
-        
+        const alert = document.getElementById('ovarlay');
+        const textAlert = document.getElementById('text-alert');
+           
+        textAlert.textContent = '¡Ingrese texto en minúsculas y sin acentos!';
+        alert.classList.remove('hidden');
     }
 }
     
@@ -45,8 +50,11 @@ function desencriptar() {
         textResult.value = newText;
             
     } else {
-        console.log('No cumple con la validación');
-        
+        const alert = document.getElementById('ovarlay');
+        const textAlert = document.getElementById('text-alert');
+
+        textAlert.textContent = '¡No ha ingresado texto para desencriptar!';
+        alert.classList.remove('hidden');
     }
 }
 
@@ -56,7 +64,19 @@ function copiarTexto() {
     
     navigator.clipboard.writeText(textDesencriptar)
         .then(() => {
-            alert("Texto copiado al portapapeles");
+            const alert = document.getElementById('ovarlay');
+            const textAlert = document.getElementById('text-alert');
+            const textCopy = document.getElementById('text-Desencriptado').value.trim();
+
+            if (textCopy === '') {
+                textAlert.textContent = '¡Ingrese texto para copiar!';
+                alert.classList.remove('hidden');
+            } else {
+                textAlert.textContent = '¡Texto copiado correctamente!';
+                alert.classList.remove('hidden');
+            }
+            
+            
         })
         .catch(err => {
             console.log('Error al copiar texto:', err);            
@@ -69,4 +89,29 @@ function limpiarTextAreaE () {
 
 function limpiarTextAreaD () {
     document.getElementById('text-Desencriptado').value = '';
+}
+
+function cerrarAlerta () {
+    const alert = document.getElementById('ovarlay');
+    alert.classList.add('hidden');
+}
+
+function chageTheme () {
+    const root = document.documentElement;
+
+    // Obtén el valor actual de la variable --primary-colorL
+    const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-colorL').trim();
+
+    // Verifica y cambia el tema según el color actual
+    if (currentPrimaryColor === '#F1FFBDB0') {
+        // Cambiar a tema oscuro
+        root.style.setProperty('--primary-colorL', '#0B1E26');
+        root.style.setProperty('--secondary-colorL', '#CBF0FF');
+        root.style.setProperty('--third-colorL', '#FCFCFC');
+    } else {
+        // Cambiar a tema claro
+        root.style.setProperty('--primary-colorL', '#F1FFBDB0');
+        root.style.setProperty('--secondary-colorL', '#B4C186EF');
+        root.style.setProperty('--third-colorL', '#000000');
+    }
 }

@@ -15,8 +15,9 @@ body {
     background-color: var(--primary-colorL);
     font-family: "Chakra Petch", sans-serif;;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     
 }
@@ -24,7 +25,17 @@ body {
 /* Zona principal */
 header {
     height: 100px;
-    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Span theme*/
+
+
+#icon-Theme {
+    padding-left: 80px;
 }
 
 main {
@@ -164,7 +175,8 @@ i{
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    padding: 20px
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 #text-Desencriptado {
@@ -178,4 +190,8 @@ i{
     color: #0a0a0a;
     border: none;   
     background-color: #f1ffbd00;  
+}
+
+h6 {
+    font-size: 13px;
 }

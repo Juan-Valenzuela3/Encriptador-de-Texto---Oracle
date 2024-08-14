@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="./Styless/normalize.css">
     <link rel="stylesheet" href="./Styless/style-Desktop.css">
     <link rel="stylesheet" href="./Styless/alert.css">
+    
     <script src="https://kit.fontawesome.com/f861f16254.js" crossorigin="anonymous"></script>
     <title>Encriptador de Texto</title>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <i id="icon-Theme" class="fa-solid fa-circle-half-stroke fa-3x"></i>
+    </header>
 
     <main>
 
@@ -30,20 +33,21 @@
         </div>
         <div id="encriptacion">
             <textarea id="text-Desencriptado" disabled></textarea>
-            <button id="copy">Copiar</button>
+            <button id="copy">Copiar</button> 
         </div>
 
         <!- Div de alerta ->
 
         <div id="ovarlay" class="overlay hidden">
             <div class="overlay-content">
-                <button id="close-overlay"></button>
+                <p id="text-alert"></p>
+                <button id="close-overlay">Entendido</button>
             </div>
         </div>
     </main>
 
     <footer>
-        <h6>Desarrollador por Juan Valenzuela</h6>
+        <h6>Desarrollado por Juan Valenzuela</h6>
     </footer>
 
     <script src="app.js"></script>
