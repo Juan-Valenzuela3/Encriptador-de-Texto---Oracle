@@ -19,4 +19,8 @@ Este proyecto es un encriptador de texto desarrollado como parte de un challenge
 - https://github.com/Juan-Valenzuela3
 - https://www.linkedin.com/in/juan-valenzuela-camelo
 
+## Licencia
+
+- Este proyecto está licenciado bajo la [Licencia MIT](./License.txt).
+
 ![Logo del Proyecto](./assets/Logo-Encriptador.png)
