@@ -4,7 +4,19 @@ document.getElementById('copy').addEventListener('click', copiarTexto);
 document.getElementById('close-overlay').addEventListener('click', cerrarAlerta);
 document.getElementById('icon-Theme').addEventListener('click', chageTheme);
 
-// Funciones
+
+document.addEventListener("DOMContentLoaded", function() {
+    const root = document.documentElement;
+
+    // Cambia las variables a los valores del tema oscuro
+    root.style.setProperty('--primary-colorL', '#0B1E26');
+    root.style.setProperty('--secondary-colorL', '#CBF0FF');
+    root.style.setProperty('--third-colorL', '#FCFCFC');
+    root.style.setProperty('--copy-color', '#0B1E26');
+    root.style.setProperty('--efect-buttom', '#6595a8')
+});
+
+// Funciones 
 
 function encriptar () {
     let texto = document.getElementById('ingresar-texto').value;
@@ -108,10 +120,14 @@ function chageTheme () {
         root.style.setProperty('--primary-colorL', '#0B1E26');
         root.style.setProperty('--secondary-colorL', '#CBF0FF');
         root.style.setProperty('--third-colorL', '#FCFCFC');
+        root.style.setProperty('--copy-color', '#0B1E26');
+        root.style.setProperty('--efect-buttom', '#6595a8')
     } else {
         // Cambiar a tema claro
         root.style.setProperty('--primary-colorL', '#F1FFBDB0');
         root.style.setProperty('--secondary-colorL', '#B4C186EF');
         root.style.setProperty('--third-colorL', '#000000');
+        root.style.setProperty('--copy-color', '#25291A');
+        root.style.setProperty('--efect-buttom', '#99a373ef')
     }
 }

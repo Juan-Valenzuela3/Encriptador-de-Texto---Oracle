@@ -5,6 +5,8 @@
     --primary-colorL: #F1FFBDB0;
     --secondary-colorL: #B4C186EF;
     --third-colorL: #000000;
+    --copy-color: #25291A;
+    --efect-buttom: #99a373ef;
 
     --primary-colorD: #0B1E26;
     --secondary-colorD: #CBF0FF;
@@ -36,6 +38,7 @@ header {
 
 #icon-Theme {
     padding-left: 80px;
+    color: var(--third-colorL);
 }
 
 main {
@@ -76,6 +79,7 @@ footer {
 h1 {
     margin: 0;
     font-size: 40px;
+    color: var(--third-colorL);
 }
 
 /* Text area encriptar */
@@ -86,8 +90,8 @@ h1 {
     overflow-y: auto; 
     word-wrap: break-word;
     font-size: 32px;
-    font-weight: 200;
-    color: #0a0a0aa4;
+    font-weight: 100;
+    color: var(--third-colorL);
     border: none;   
     background-color: #f1ffbd00;   
 }
@@ -103,6 +107,7 @@ i{
 #advertencia {
     font-size: 20px;
     font-weight:normal;
+    color: var(--third-colorL);
 }
 
 /* Botones encriptar y desencriptar */
@@ -122,7 +127,7 @@ i{
 
 #encriptar:hover, #desencriptar:hover {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-    background-color: #99a373ef; 
+    background-color: var(--efect-buttom); 
     cursor: pointer;
 }
 
@@ -145,7 +150,7 @@ i{
 #copy {
     height: 42px;
     width: 105px;
-    background-color: #25291A;
+    background-color: var(--copy-color);
     color: white;
     border: none;
     border-radius: 15px;
@@ -195,3 +200,4 @@ i{
 h6 {
     font-size: 13px;
 }
+

@@ -1,0 +1,182 @@
+/* Archivo: responsive.css */
+
+/* Estilos para dispositivos móviles (celulares) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    header {
+        height: 50px;
+        justify-content: start;
+    }
+
+    #icon-Theme {
+        padding-left: 0;
+        font-size: 2rem;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #text {
+        width: 100%;
+        max-width: 90%;
+        min-height: 200px;
+        padding: 10px;
+    }
+
+    #encriptacion {
+        width: 85%;
+        height: 200px;
+        padding: 10px;
+        margin: 10px 50px ;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #ingresar-texto {
+        width: 100%;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    #text-Desencriptado {
+        font-size: 16px;
+        width: 90%;
+        color: black;
+        font-weight: 300;
+        padding-top: 5px;
+        height: 100px;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    #encriptar, #desencriptar {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #copy {
+        width: 35%;
+        height: 50px;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    footer {
+        height: 40px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+
+    #advertencia {
+        font-size: 16px; /* Ajusta el tamaño de fuente para dispositivos móviles */
+        line-height: 1.3; /* Ajusta la altura de línea */
+        color: var(--third-colorL);
+        text-align: left; /* Asegúrate de que el texto esté alineado a la izquierda */
+        display: flex; /* Utiliza flexbox para alinear el icono y el texto */
+        align-items: center; /* Alinea el icono verticalmente con el texto */
+    }
+    
+    #advertencia i {
+        margin-right: 8px; /* Ajusta el espacio entre el icono y el texto */
+    }
+}
+
+/* Estilos para dispositivos tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header {
+        height: 50px;
+        justify-content: start;
+    }
+
+    #icon-Theme {
+        padding-left: 0;
+        font-size: 2.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #text {
+        width: 90%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    #encriptacion {
+        width: 83%;
+        height: 300px;
+        padding: 10px;
+        margin: 10px 50px ;
+        
+    }
+
+    h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #ingresar-texto {
+        width: 100%;
+        height: 100px;
+        font-size: 20px;
+    }
+
+    #text-Desencriptado {
+        font-size: 20px;
+        height: 100px;
+        padding: 10px;
+    }
+
+
+    .button {
+        gap: 30px;
+        width: 100%;
+    }
+
+    #encriptar, #desencriptar {
+        width: 100%;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    #copy {
+        height: 50px;
+        font-size: 18px;
+        width: 35%;
+        margin: 10px;
+    }
+
+    footer {
+        height: 45px;
+    }
+
+    h6 {
+        font-size: 13px;
+    }
+}

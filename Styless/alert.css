@@ -60,4 +60,24 @@
 #text-alert {
     font-size: 20px;
     font-weight: 400;
+    color: var(--third-colorL);
+}
+
+@media (max-width: 480px) {
+    .overlay-content {
+        
+        width: 80%;
+        height: 20%;
+        padding: 0px;
+    }
+
+    #text-alert {
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #close-overlay {
+        margin: 20px;
+    }
 }
